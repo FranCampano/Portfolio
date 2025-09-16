@@ -1,0 +1,43 @@
+<section id="about" class="p-6 rounded-lg text-black bg-black pt-10">
+
+
+  <section class="flex flex-col items-center pb-16 text-white bg-black">
+    <img [src]="'yo.png'" class="w-32 h-32 rounded-full mb-4 object-cover shadow-lg" />
+
+    <h3 class="text-3xl font-bold mb-2">Francisco Campano Díaz</h3>
+
+    <div class="max-w-2xl w-full text-center">
+      <h1 class="text-4xl sm:text-5xl md:text-4xl mb-4 uppercase text-purple-400"
+        style="text-shadow: 0 0 4px #b06af1, 0 0 8px #b06af1;">
+        Desarrollador De Aplicaciones Multiplataforma
+      </h1>
+
+
+      <p class="text-justify">
+        ¡Hola! Soy Francisco Campano Díaz, un desarrollador apasionado por crear soluciones innovadoras y eficientes.
+        Me especializo en [tus especialidades, por ejemplo, desarrollo web, aplicaciones móviles, etc.] y
+        disfruto trabajando en proyectos que desafían mis habilidades y me permiten aprender cosas nuevas.
+      </p>
+    </div>
+
+  </section>
+
+  <h3 id="skills" class="text-xl font-bold mb-2 text-center text-white">Habilidades técnicas</h3>
+
+
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-6 text-center max-w-6xl mx-auto w-1/2 gap-10">
+    @for (skill of technologies; track skill.name) {
+    <div class="flex flex-col items-center gap-2 p-4 bg-white rounded-lg shadow-md w-32 h-32
+                hover:shadow-lg transition-shadow border-2 border-transparent hover:border-white"
+      style="box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;"
+      onmouseenter="this.style.boxShadow='0 0 10px #00ffff, 0 0 20px #00ffff'"
+      onmouseleave="this.style.boxShadow='0 0 5px #00ffff, 0 0 10px #00ffff'">
+      <!-- Icono -->
+      <img [src]="skill.iconUrl" [alt]="skill.name" class="w-8 h-8 sm:w-10 sm:h-10 object-contain mb-2" />
+      <!-- Nombre -->
+      <span class="text-gray-800 font-medium">{{ skill.name }}</span>
+    </div>
+    }
+  </section>
+
+</section>
