@@ -1,7 +1,20 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes: night;
-}
+
 html {
   scroll-behavior: smooth;
+  letter-spacing: 0.05em;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Oswald';
+    src: url('assets/fonts/Oswald.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+}
+
+:root {
+  --default-font-family: 'Oswald', ui-sans-serif, system-ui, sans-serif;
 }

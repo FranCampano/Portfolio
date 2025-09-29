@@ -1,5 +1,4 @@
-<section id="about" class="p-6 rounded-lg text-black bg-black pt-10">
-
+<section id="about" class="p-6 rounded-lg text-black bg-black pt-20">
 
   <section class="flex flex-col items-center pb-16 text-white bg-black">
     <img [src]="'yo.png'" class="w-32 h-32 rounded-full mb-4 object-cover shadow-lg" />
@@ -8,34 +7,38 @@
 
     <div class="max-w-2xl w-full text-center">
       <h1 class="text-4xl sm:text-5xl md:text-4xl mb-4 uppercase text-purple-400"
-        style="text-shadow: 0 0 4px #b06af1, 0 0 8px #b06af1;">
+        style="text-shadow: 0 0 2px #b06af1, 0 0 4px #b06af1;">
         Desarrollador De Aplicaciones Multiplataforma
       </h1>
 
-
       <p class="text-justify">
-        ¡Hola! Soy Francisco Campano Díaz, un desarrollador apasionado por crear soluciones innovadoras y eficientes.
-        Me especializo en [tus especialidades, por ejemplo, desarrollo web, aplicaciones móviles, etc.] y
-        disfruto trabajando en proyectos que desafían mis habilidades y me permiten aprender cosas nuevas.
+        ¡Hola! Soy Francisco Campano Díaz, desarrollador de software orientado a resolver problemas reales mediante
+        tecnología moderna. Me especializo en el desarrollo web y de aplicaciones multiplataforma, trabajando con
+        tecnologías como Kotlin, Angular, Java y TypeScript. Me motiva trabajar en proyectos que desafían mis
+        habilidades y me permiten seguir aprendiendo y creciendo como profesional.
       </p>
-    </div>
 
+    </div>
+    <a class="mt-10 bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition"
+      href="cv.pdf" download="FranciscoCampanoCV.pdf">
+      Descargar CV
+    </a>
   </section>
 
-  <h3 id="skills" class="text-xl font-bold mb-2 text-center text-white">Habilidades técnicas</h3>
 
+  <h2 id="skills" class="text-2xl font-bold mb-2 text-center text-white">Habilidades técnicas</h2>
 
-  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-6 text-center max-w-6xl mx-auto w-1/2 gap-10">
+  <section class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 p-6 text-center max-w-3xl mx-auto gap-4 sm:gap-6 ">
     @for (skill of technologies; track skill.name) {
-    <div class="flex flex-col items-center gap-2 p-4 bg-white rounded-lg shadow-md w-32 h-32
+    <div class="flex flex-col items-center gap-2 p-4  rounded-lg shadow-md w-full max-w-[150px] mx-auto
                 hover:shadow-lg transition-shadow border-2 border-transparent hover:border-white"
-      style="box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;"
-      onmouseenter="this.style.boxShadow='0 0 10px #00ffff, 0 0 20px #00ffff'"
-      onmouseleave="this.style.boxShadow='0 0 5px #00ffff, 0 0 10px #00ffff'">
+      style="background-color: #dfd0db; box-shadow: 0 0 5px #b06af1, 0 0 10px #b06af1;"
+      onmouseenter="this.style.boxShadow='0 0 10px #b06af1, 0 0 20px #b06af1'"
+      onmouseleave="this.style.boxShadow='0 0 5px #b06af1, 0 0 10px #b06af1'">
       <!-- Icono -->
-      <img [src]="skill.iconUrl" [alt]="skill.name" class="w-8 h-8 sm:w-10 sm:h-10 object-contain mb-2" />
+      <img [src]="skill.iconUrl" [alt]="skill.name" class="w-20 h-8 sm:w-10 sm:h-10 object-contain mb-2" />
       <!-- Nombre -->
-      <span class="text-gray-800 font-medium">{{ skill.name }}</span>
+      <span class="text-gray-800 font-medium text-sm">{{ skill.name }}</span>
     </div>
     }
   </section>
